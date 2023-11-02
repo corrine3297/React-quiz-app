@@ -19,7 +19,7 @@ function MainMenu() {
     }
 
     return (
-        <div className='mt-5' style={{ width: '350px'}}>
+        <div className='mt-5' style={{ width: '300px'}}>
             <input type="text" onChange={(e) =>{setName(e.target.value)} } className='form-control' placeholder='Enter your name' />
             <div className='d-grid mb-4'>
                 <button onClick={gameStart} className='btn btn-outline-dark fw-bolder fs-6 mt-4'>Start Quiz</button>

@@ -1,3 +1,15 @@
-.question-text{
+.question-text {
     text-align: left !important;
+}
+
+.quiz-container {
+    width: 400px;
+    margin-left: 25px !important;
+}
+
+@media screen and (max-width:800px) {
+    .quiz-container {
+        width: 400px;
+        margin-left: 0px;
+    }
 }

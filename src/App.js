@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div className='d-flex flex-column' style={{ justifyContent: 'center', alignItems: 'center', height: '90vh' }}>
-        <div className='shadow p-5 rounded'>
+        <div className='shadow p-5 border-edage'>
           <h2 className='m-2 text-center' style={{ color: 'black' }}>Smart Quiz</h2>
           <QuizContext.Provider value={{ gameState, setGameState, result, setResult, name, setName }}>
             {gameState === 'menu' && <MainMenu />}

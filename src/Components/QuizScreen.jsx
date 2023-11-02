@@ -29,10 +29,10 @@ function QuizScreen() {
 
     return (
         <>
-            <div className='d-flex flex-column justify-content-center align-items-center w-100'>
+            <div className='w-100'>
                 <h5 className='mt-5 mb-2 question-text' style={{ color: 'red' }}>Q. {Questions[currentQuestion].question}</h5>
-                <div className='d-flex flex-column' style={{ width: '300px' }}>
-                    <Row>
+                <div className='d-flex justify-content-center flex-column align-items-center' style={{ width: '400px' }}>
+                    <Row className='quiz-container'>
                         <Col sm={12} md={6} className='d-grid'>
                             <button onClick={() => setSelectedOption('A')} className='btn btn-dark my-3 fw-bolder fs-6'>{Questions[currentQuestion].optionA}</button>
                             <button onClick={() => setSelectedOption('B')} className='btn btn-dark my-3 fw-bolder fs-6'>{Questions[currentQuestion].optionB}</button>
@@ -43,16 +43,16 @@ function QuizScreen() {
                             <button onClick={() => setSelectedOption('D')} className='btn btn-dark my-3 fw-bolder fs-6'>{Questions[currentQuestion].optionD}</button>
                         </Col>
                     </Row>
+                    {currentQuestion == Questions.length - 1 ? (
+                        <button onClick={endQuiz} className='btn btn-outline-dark mt-3' style={{ width: '200px' }} >Finish </button>
+                    ) : (
+
+                        <button onClick={nextQuestion} className='btn btn-outline-dark mt-3' style={{ width: '200px' }}>Next </button>
+
+                    )
+                    }
 
                 </div>
-                {currentQuestion == Questions.length - 1 ? (
-                    <button onClick={endQuiz} className='btn btn-outline-dark mt-3' style={{ width: '200px' }} >Finish </button>
-                ) : (
-
-                    <button onClick={nextQuestion} className='btn btn-outline-dark mt-3' style={{ width: '200px' }}>Next </button>
-
-                )
-                }
 
             </div>
 
