@@ -6,16 +6,20 @@ import EndScreen from './Components/EndScreen';
 import { QuizContext } from './ContextAPI/Contexts';
 
 function App() {
-  const [gameState, setGameState] = useState('menu')
-   return (
+  const [gameState, setGameState] = useState('menu');
+  const [name, setName] = useState('');
+  const [result, setResult] = useState(0);
+  return (
     <>
-      <div>
-        <h2>Quiz App</h2>
-        <QuizContext.Provider value={{gameState,setGameState}}>
-          {gameState === 'menu' && <MainMenu />}
-          {gameState === 'quiz' && <QuizScreen />}
-          {gameState === 'end' && <EndScreen />}
-        </QuizContext.Provider>
+      <div className='d-flex flex-column' style={{ justifyContent: 'center', alignItems: 'center', height: '90vh' }}>
+        <div className='shadow p-5 rounded'>
+          <h2 className='m-2 text-center' style={{ color: 'black' }}>Smart Quiz</h2>
+          <QuizContext.Provider value={{ gameState, setGameState, result, setResult, name, setName }}>
+            {gameState === 'menu' && <MainMenu />}
+            {gameState === 'quiz' && <QuizScreen />}
+            {gameState === 'end' && <EndScreen />}
+          </QuizContext.Provider>
+        </div>
       </div>
     </>
   );
