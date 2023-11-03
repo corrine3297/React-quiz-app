@@ -54,7 +54,7 @@ function QuizScreen() {
         <>
             <div className='w-100'>
                 <h5 className='mt-5 mb-2 question-text' style={{ color: 'black' }}>Q. {Questions[currentQuestion].question}</h5>
-                <div className='d-flex justify-content-center flex-column align-items-center' style={{ width: '400px' }}>
+                <div className='d-flex justify-content-center flex-column align-items-center'>
                     <Row className='quiz-container'>
                         <Col sm={12} md={6} className='d-grid'>
                             <button onClick={() => selectedOptions('A')} className='btn btn-dark my-3 fw-bolder fs-6'>{Questions[currentQuestion].optionA}</button>

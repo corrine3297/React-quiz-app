@@ -20,7 +20,7 @@ function App() {
     <>
       <QuizContext.Provider value={{ gameState, setGameState, result, setResult, name, setName, theme, toggleTheme }}>
         <div className='d-flex flex-column' style={{ justifyContent: 'center', alignItems: 'center', height: '100vh' }} id={theme}>
-          <div className='shadow p-5 border-edage card-bg'>
+          <div className='shadow mt-4 p-5 border-edage card-bg'>
             <h2 className='m-2 text-center' style={{ color: 'black' }}>Smart Quiz</h2>
 
 
@@ -28,11 +28,11 @@ function App() {
             {gameState === 'quiz' && <QuizScreen />}
             {gameState === 'end' && <EndScreen />}
           </div>
-          <Switch className='mt-5'onChange={toggleTheme} checked={theme==='light'}/>
+          <Switch className='mt-4 mb-5'onChange={toggleTheme} checked={theme==='light'}/>
         </div>
       </QuizContext.Provider>
     </>
-  );
+  ); 
 } 
 
 export default App;

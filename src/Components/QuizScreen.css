@@ -3,8 +3,8 @@
 }
 
 .quiz-container {
-    width: 400px;
-    margin-left: 25px !important;
+    width: 500px;
+    /* margin-left: 25px !important; */
 }
 
 @media screen and (max-width:900px) {
