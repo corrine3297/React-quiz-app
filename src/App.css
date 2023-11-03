@@ -25,3 +25,10 @@
 #dark .card-bg{
   background-color:rgb(139, 135, 135);
 }
+
+
+@media screen and (max-width:900px) {
+  .card-container {
+    margin-top: 100px !important;
+  }
+}
