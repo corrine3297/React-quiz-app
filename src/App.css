@@ -1,3 +1,27 @@
 .border-edage{
   border-radius: 25px
 }
+
+#light{
+  background-color: lightblue;
+}
+
+#dark{
+  background-color: darkgray;
+}
+
+#light .input-bg{
+  background-color: rgb(125, 189, 211);
+}
+
+#dark .input-bg{
+  background-color:rgb(139, 135, 135);
+}
+
+#light .card-bg{
+  background-color: rgb(125, 189, 211);
+}
+
+#dark .card-bg{
+  background-color:rgb(139, 135, 135);
+}

@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { QuizContext } from '../ContextAPI/Contexts';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '../App.css'
 
 function MainMenu() {
     const { gameState, setGameState, name, setName } = useContext(QuizContext)
@@ -12,7 +13,7 @@ function MainMenu() {
             setGameState('quiz')
         }
         else{
-            toast.warning("Please enter name to start game")
+            toast.dark("Please enter name to start game")
         }
 
 
@@ -20,7 +21,7 @@ function MainMenu() {
 
     return (
         <div className='mt-5' style={{ width: '300px'}}>
-            <input type="text" onChange={(e) =>{setName(e.target.value)} } className='form-control' placeholder='Enter your name' />
+            <input type="text" onChange={(e) =>{setName(e.target.value)} } className='form-control input-bg' placeholder='Enter your name' />
             <div className='d-grid mb-4'>
                 <button onClick={gameStart} className='btn btn-outline-dark fw-bolder fs-6 mt-4'>Start Quiz</button>
             </div>
