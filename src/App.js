@@ -20,7 +20,7 @@ function App() {
     <>
       <QuizContext.Provider value={{ gameState, setGameState, result, setResult, name, setName, theme, toggleTheme }}>
         <div className='d-flex flex-column' style={{ justifyContent: 'center', alignItems: 'center', height: '100vh' }} id={theme}>
-          <div className='shadow mt-4 p-5 border-edage card-bg card-container'>
+          <div className='shadow mt-4 p-5 border-edage card-bg'>
             <h2 className='m-2 text-center' style={{ color: 'black' }}>Smart Quiz</h2>
 
 
